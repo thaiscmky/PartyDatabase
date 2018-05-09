@@ -1,0 +1,24 @@
+{
+  "name": "unsolved",
+  "version": "1.0.0",
+  "description": "* A holiday party planner application to help create parties for clients whilst also keeping track of all the events that hosted.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thaiscmky/PartyDatabase.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thaiscmky/PartyDatabase/issues"
+  },
+  "homepage": "https://github.com/thaiscmky/PartyDatabase#readme",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "mysql": "^2.15.0"
+  }
+}
