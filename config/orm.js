@@ -62,3 +62,5 @@ var Orm = function(action, subjects, condition){
       });
   }
 };
+
+module.exports = Orm;
