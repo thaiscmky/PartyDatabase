@@ -48,6 +48,9 @@ Orm.prototype.evaluateCondition = function() {
         case 'like':
             this.sql = sql.concat(sql, 'WHERE ?? LIKE ? ');
             break;
+        case 'on':
+            this.sql = sql.concat(sql, 'JOIN ?? ON ?? = ??');
+            break;
     }
 };
 Orm.prototype.runQuery = function(){
@@ -55,7 +58,6 @@ Orm.prototype.runQuery = function(){
         this.evaluateAction();
     if(this['condition'] !== null)
         this.evaluateCondition();
-
     if(this.table !== null)   this.args.unshift(this.table);
     if(this.sql.indexOf('SELECT') !== -1){
         var temp = [this.args[1], this.args[0]];

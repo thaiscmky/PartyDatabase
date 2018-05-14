@@ -24,3 +24,11 @@ grownupParties.runQuery()
     .on('result', function(row){
         console.log(row);
     });
+var clientParties = new Orm('parties', 'select', ['*', 'id','client_id', 'join']);
+clientParties.runQuery()
+    .on('fields', function() {
+        console.log('Clients:');
+    })
+    .on('result', function(row){
+        console.log(row);
+    });
